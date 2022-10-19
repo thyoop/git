@@ -1,0 +1,398 @@
+ul, li{list-style: none;
+    margin: 0;
+    padding: 0;}
+  a{text-decoration-line: none;}
+  body{margin: 0;}
+  
+  /* Demo styles */
+  .sect4{position: relative;
+    font-size: 14px;
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  
+  .sect4 .swiper {
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  .sect4 .swiper-slide {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+  
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-slide::after{
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .slide1{background-image: url(./images/girls.jpg);}
+  .slide2{background-image: url(./images/asp.jpg);}
+  .slide3{background-image: url(./images/nct.jpg);}
+  .swiper-button-prev, .swiper-button-next{
+    color: #fff;
+  }
+  
+  /*----------------------------------------------------------*/
+  .goods {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+  }
+  .goods li {
+    text-align: center;
+    z-index: 3;
+  }
+  
+  .goods li img {
+    filter: drop-shadow(4px 4px 4px gray);
+  }
+  .goods li .goods-name {
+    color: #000;
+  }
+  
+  /*----------------------------------------------------------*/
+  article {
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    background-color: #fce1e6;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 90;
+    display: none;
+  }
+  article.on{
+    display: block;
+  }
+  .inner {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+  }
+  article .inner .logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .inner span {
+    display: block;
+    text-align: center;
+  }
+  
+  #celeb {
+    border-top: rgb(5, 5, 5) 1px solid;
+    border-bottom: rgb(5, 5, 5) 1px solid;
+    width: 30%;
+    margin: auto;
+  }
+  #buy {
+    font-weight: 500;
+    border-radius: 0%;
+    margin: auto;
+    width: 50%;
+    background-color: #000;
+    color: #fff;
+    margin-top: 5%;
+  }
+  a.close {
+    position: absolute;
+  }
+  /*----------------------------------------------------------*/
+  footer {
+    position: relative;
+    background: #000;
+  }
+  
+  .familySite {
+    border-bottom: rgb(192, 191, 191) 1px solid;
+  }
+  
+  .familySite .innerWrap {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .familySite ul li {
+    display: inline-block;
+    line-height: 50%;
+  }
+  footer .familySite ul li a {
+    color: #fff;
+    letter-spacing: 1.5px;
+  }
+  
+  footer .container .copyright {
+    font-family: arial, san-serif;
+    color: gray;
+  }
+  footer .container .outLink {
+    color: gray;
+    display: flex;
+    margin: auto;
+  }
+  .container .innerWrap {
+    display: flex;
+    margin: 0 auto;
+  }
+  .sns {
+    display: flex;
+  }
+  /*----------------------------------------------------------*/
+  @media screen and (max-width: 521px) {
+    .sect4 .swiper-slide{height: 40vh;
+      background-position-x: center;}
+  /*----------------------------------------------------------*/
+    .goods {
+      bottom: 0%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .goods li{
+      width: 40%;
+    }
+    .goods li img {
+      width: 100px;
+      height: 100px;
+    }
+    .goods li .goods-name {
+      font-size: 11px;
+      color: #fff;
+    }
+    /*----------------------------------------------------------*/
+    footer {
+      text-align: center;
+      background-color: #000;
+      margin: auto;
+    }
+    .familySite {
+      border-bottom: rgb(192, 191, 191) 1px solid;
+      padding: 10px 0;
+    }
+    footer .familySite ul li {
+      width: 22%;
+      line-height: 1.5;
+    }
+    footer .familySite ul li a {
+      font-size: 12px;
+    }
+  
+    footer .container {
+      margin: auto;
+     width: 90%;
+     padding-top: 10px;
+    }
+    footer .container .copyright {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    footer .container .outLink {
+      letter-spacing: 1px;
+      font-size: 13px;
+      color: gray;
+      display: flex;
+      justify-content: center;
+      padding: 7px;
+      gap: 5px;
+    }
+    .sns {
+      justify-content: center;
+      padding: 0;
+  
+    }
+    .sns img {
+      width: 40px;
+    }
+  }
+  @media screen and (min-width: 522px) {
+    .sect4 .swiper{
+      height: 500px;
+    }
+    .sect4 .swiper-slide{
+      height: 30vh;
+      font-size: 13px;
+    }
+    .sect4 .slide1{background-position-y: 30%;}
+    .sect4 .slide2{background-position-y: 10%;}
+    .sect4 .slide3{background-position-y: 50%;}
+    .swiper-button-prev, .swiper-button-next{
+      top: 20%;
+      font-weight: bold;
+    }
+  
+    /*----------------------------------------------------------*/
+    .goods{
+      bottom: -70%;
+      padding: 0;
+      flex: 1;
+    }
+    .goods li .spgoods{
+      width: 150px;
+    }
+    .goods li img {
+      width: 150px;
+      height: 150px;
+    }
+    .goods li .goods-name {
+      letter-spacing: 1px;
+    }
+    
+  /*----------------------------------------------------------*/
+  .familySite .innerWrap {
+    padding: 10px 0;
+  }
+  footer .familySite ul li a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  footer .container {
+    padding-top: 1rem;
+    margin-left: 2rem;
+    line-height: 1.2;
+  }
+  footer .container .copyright {
+    width: 90%;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  footer .container .outLink {
+  padding: 10px 0;
+  gap: 7px;
+  }
+  .sns {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    gap: 10px;
+  }
+  .sns img {
+    width: 40px;
+  }
+  }
+  @media screen and (min-width: 1020px) {
+    .sect4 .swiper{
+      height: 110vh;
+    }
+    .sect4 .swiper-slide{
+      height: 80vh;
+      font-size: 18px;
+    }
+    .sect4 .slide1{background-position-y: 30%;}
+    .sect4 .slide2{background-position-y: 10%;}
+    .sect4 .slide3{background-position-y: 50%;}
+    .swiper-button-prev, .swiper-button-next{
+      top: 50%;
+    }
+  /*----------------------------------------------------------*/
+  .goods li img {
+    width: 250px;
+    height: 250px;
+  }
+  .goods li .goods-name {
+    font-size: 16px;
+  }
+  .goods{
+    bottom: -30%;
+  }
+  /*----------------------------------------------------------*/
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5%;
+  }
+  .prd img {
+    width: 300px;
+    height: 300px;
+    margin-top: 2%;
+  }
+  
+  #name {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  #money {
+    font-size: 15px;
+    font-weight: 350;
+  }
+  .inner span {
+    margin: 4%;
+  }
+  #buy {
+    font-size: 30px;
+  }
+  a.close {
+    right: 10px;
+    top: 10px;
+  }
+  /*----------------------------------------------------------*/
+  footer {
+    height: 200px;
+  }
+    .familySite {
+      height: 80px;
+    }
+    .familySite .innerWrap {
+      max-width: 1500px;
+      padding: 40px 0;
+    }
+    footer .familySite ul li a {
+      font-size: 18px;
+    }
+    footer .container {
+      padding-top: 1rem;
+      margin-left: 2rem;
+    }
+    footer .container .copyright {
+      width: 55%;
+      line-height: 1.5;
+      font-size: 15px;
+  
+    }
+    footer .container .outLink {
+      letter-spacing: 1px;
+      font-size: 15px;
+      gap: 10px;
+    }
+    .container .F_inner {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+    .container .innerWrap {
+      width: 1600px;
+      padding: 30px 0;
+    }
+    .sns {
+      gap: 10px;
+      padding: 20px 0;
+    }
+    .sns img {
+      width: 50px;
+    }
+    
+  }
+  

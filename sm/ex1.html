@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+*{margin:0;padding:0;}
+.hidden{display: none;}
+#bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgb(0,0,0,0.5);
+}
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+    height: auto;
+}
+#popup > h3{
+    border-bottom: 2px solid rgb(77, 77, 77);
+    padding: 10px 0;
+}
+#popup-text{
+    margin: 20px 0;
+}
+.button{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(77, 77, 77);
+}
+
+
+
+.off{display: none;}
+#bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgb(0,0,0,0.5);
+}
+.flex{display: flex;}
+a{text-decoration: none;
+    background-color: aquamarine;
+    margin: 5rem;
+    padding: 1rem 3rem;
+    cursor: pointer;}
+#profile{width: 300px;
+    background-color: aquamarine;
+    border-radius: 100px;
+    padding: 2rem 4rem; margin: 5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);}
+.profile-Title img{width: 150px;
+    border-radius: 100px;}
+.profile-Title h2{font-size: 60px;
+    padding: 2rem 0 0 1.8rem;}
+.profile-Txt{justify-content: space-around;
+    line-height: 1.7;
+    margin-top: .5rem;}
+.txt-Title{font-weight: bold;}
+
+    </style>
+</head>
+<body>
+    <a href="#" class="grtfg">김도영</a>
+
+
+    <!-- <div id="bg"></div> -->
+   
+    <div id="profile" class="off">
+        <div class="900">
+            <div class="DOYOUNG">
+                <div class="profile-Title flex">
+                    <img src="./img/i_DOYOUNG.jpg" alt="도영">
+                    <h2>도영</h2>
+                </div>
+                <div class="profile-Txt flex">
+                    <div class="txt-Title">
+                        <p>생일</p>
+                        <p>데뷔</p>
+                    </div>
+                    <div class="txt-sub">
+                        <p>2월 1일</p>
+                        <p>2016년 04년 싱글</p>
+                        <p>'일곱 번째 감각', 'WITHOUT YOU'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="800"></div>
+    </div>
+
+
+
+
+
+    <button id ="go" class="button">눌러주세요</button>
+    <div id="bg" class="hidden"></div>
+    <div id="popup" class="hidden">
+        <h3>팝업창입니다</h3>
+        <div id="popup-text">
+            안녕하세요 팝업창입니다
+            <br>안녕하세요 팝업창입니다
+            <br>안녕하세요 팝업창입니다
+            <br>안녕하세요 팝업창입니다
+        </div>
+        <button id="exit" class="button">나가기</button>
+    </div>
+
+
+</body>
+<script>
+    const go = document.querySelector("#go");
+    const bg = document.querySelector("#bg");
+    const popup = document.querySelector("#popup");
+    const exit = document.querySelector("#exit");
+
+    go.addEventListener("click",function(){
+        bg.classList.remove("hidden");
+        bg.classList.remove("off");
+        popup.classList.remove("hidden");
+    });
+    exit.addEventListener("click",function(){
+        bg.classList.add("hidden");
+        popup.classList.add("hidden");
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$('.grtfg').mouseenter(function(){
+    // $('#bg').fadeIn()
+    $('#profile').fadeIn()
+})
+$('.grtfg').mouseleave(function(){
+    // $('#bg').fadeIn()
+    $('#profile').fadeOut()
+})
+
+</script>
+
+
+</html>
